@@ -14,7 +14,7 @@ DSH 右侧栏 rundiag 插件：按日期安排任务、记录完成、合并计�
 - 每个球保存完整训练属性：距离、时长、平均 / 最大心率、卡路里、训练负荷、爬升、平均 / 标准化功率、运动类型和活动 ID；详情页的「运动数据」可查看。
 - 每日复盘：记录主观疲劳、睡眠质量、肌肉酸痛、心情、训练评分、训练备注和训练日记；自动附上数据疲劳、CTL / ATL / TSB、ACWR、当日负荷、训练评价和教练建议。
 - 教练视图：训练准备度、疲劳累积、长期 / 短期负荷、负荷比、单调性、周负荷、14 天负荷图、HRV / 静息心率 / VO₂max / LTHR / 阈值配速 / 耐力、成绩预测和近期训练。
-- COROS：支持中国大陆、国际、欧洲区账号或 access token；同步最近 30 天活动及最近 120 天每日指标；活动不会重复计入。识别到今天的活动时，可按运动类型自动生成一条已完成的「今日跑步 / 今日骑行」任务（可在同步页开关）。
+- COROS：支持中国大陆、国际、欧洲区账号，可使用邮箱或手机号 + 密码，也可直接粘贴 access token；同步最近 30 天活动及最近 120 天每日指标；活动不会重复计入。识别到今天的活动时，可按运动类型自动生成一条已完成的「今日跑步 / 今日骑行」任务（可在同步页开关）。
 - 数据安全：增量操作提交，避免旧页面覆盖同步进度；写入前备份 `state.json.bak`；支持导出完整 JSON。
 - 版本兼容：同时兼容 DSH 0.2.2 的 `connection.requestRejection` 与 DSH 0.2.3-alpha 的 `webServer` peer 鉴权，不再依赖已被移除的 `connection` 服务。
 
@@ -26,7 +26,7 @@ DSH 右侧栏 rundiag 插件：按日期安排任务、记录完成、合并计�
 dsh plugin add github:huhu508/dsh-rundiag
 ```
 
-也可以在 DSH 的插件安装入口选择 GitHub 仓库 `huhu508/dsh-rundiag`，或下载 [v0.5.1 Release](https://github.com/huhu508/dsh-rundiag/releases/tag/v0.5.1) 中的 `dsh-rundiag-0.5.1.tgz`。安装后刷新一次 DSH 页面。
+也可以在 DSH 的插件安装入口选择 GitHub 仓库 `huhu508/dsh-rundiag`，或下载 [v0.5.2 Release](https://github.com/huhu508/dsh-rundiag/releases/tag/v0.5.2) 中的 `dsh-rundiag-0.5.2.tgz`。安装后刷新一次 DSH 页面。
 
 ## 使用
 
@@ -63,7 +63,7 @@ dsh plugin add github:huhu508/dsh-rundiag
 
 ## COROS 说明
 
-COROS 使用非官方 Training Hub API（`teamcnapi.coros.com` / `teamapi.coros.com` / `teameuapi.coros.com`）。接口可能随 COROS 更新而变化，登录也可能使手机 App 的会话失效。插件只保存 token，不保存密码；建议优先使用 token 连接。同步失败时会保留错误信息，不影响本地任务数据。
+COROS 使用非官方 Training Hub API（`teamcnapi.coros.com` / `teamapi.coros.com` / `teameuapi.coros.com`）。接口可能随 COROS 更新而变化，登录也可能使手机 App 的会话失效。登录支持邮箱或手机号，两者共用同一个密码入口；插件只保存 token，不保存密码。同步失败时会保留错误信息，不影响本地任务数据。
 
 睡眠明细需要 COROS 移动端接口和独立 token，本插件默认不读取；每日指标中的睡眠评分会在 COROS 网页接口提供时使用。
 
