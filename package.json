@@ -1,0 +1,54 @@
+{
+  "name": "dsh-rundiag",
+  "version": "0.5.0",
+  "description": "rundiag — a right-sidebar training planner for DeepSeek Harness: date-based tasks, energy-ball reviews, COROS sync and coach metrics.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./icon": "./icon.svg",
+    "./locale/*.json": "./locale/*.json",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "locale",
+    "icon.svg",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-slots",
+        "@deepseek-ai/dsh-client-ui-sidebar-right",
+        "@deepseek-ai/dsh-client-modules"
+      ]
+    }
+  },
+  "keywords": [
+    "dsh",
+    "plugin",
+    "rundiag",
+    "planner",
+    "tasks",
+    "coros",
+    "training"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/huhu508/dsh-rundiag.git"
+  },
+  "homepage": "https://github.com/huhu508/dsh-rundiag",
+  "bugs": {
+    "url": "https://github.com/huhu508/dsh-rundiag/issues"
+  }
+}

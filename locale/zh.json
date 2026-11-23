@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "rundiag",
+    "description": "按日期安排任务、合并能量球、写训练复盘，并接入 COROS 数据生成教练建议。"
+  },
+  "nav": "rundiag"
+}
