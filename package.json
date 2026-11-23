@@ -1,6 +1,6 @@
 {
   "name": "dsh-rundiag",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "rundiag — a right-sidebar training planner for DeepSeek Harness: date-based tasks, energy-ball reviews, COROS sync and coach metrics.",
   "type": "module",
   "main": "lib/index.js",

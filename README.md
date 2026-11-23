@@ -16,6 +16,7 @@ DSH 右侧栏 rundiag 插件：按日期安排任务、记录完成、合并计�
 - 教练视图：训练准备度、疲劳累积、长期 / 短期负荷、负荷比、单调性、周负荷、14 天负荷图、HRV / 静息心率 / VO₂max / LTHR / 阈值配速 / 耐力、成绩预测和近期训练。
 - COROS：支持中国大陆、国际、欧洲区账号或 access token；同步最近 30 天活动及最近 120 天每日指标；活动不会重复计入。识别到今天的活动时，可按运动类型自动生成一条已完成的「今日跑步 / 今日骑行」任务（可在同步页开关）。
 - 数据安全：增量操作提交，避免旧页面覆盖同步进度；写入前备份 `state.json.bak`；支持导出完整 JSON。
+- 版本兼容：同时兼容 DSH 0.2.2 的 `connection.requestRejection` 与 DSH 0.2.3-alpha 的 `webServer` peer 鉴权，不再依赖已被移除的 `connection` 服务。
 
 ## 安装
 
@@ -25,7 +26,7 @@ DSH 右侧栏 rundiag 插件：按日期安排任务、记录完成、合并计�
 dsh plugin add github:huhu508/dsh-rundiag
 ```
 
-也可以在 DSH 的插件安装入口选择 GitHub 仓库 `huhu508/dsh-rundiag`，或下载 [v0.5.0 Release](https://github.com/huhu508/dsh-rundiag/releases/tag/v0.5.0) 中的 `dsh-rundiag-0.5.0.tgz`。安装后刷新一次 DSH 页面。
+也可以在 DSH 的插件安装入口选择 GitHub 仓库 `huhu508/dsh-rundiag`，或下载 [v0.5.1 Release](https://github.com/huhu508/dsh-rundiag/releases/tag/v0.5.1) 中的 `dsh-rundiag-0.5.1.tgz`。安装后刷新一次 DSH 页面。
 
 ## 使用
 
