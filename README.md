@@ -2,7 +2,9 @@
 
 把训练计划、完成情况和 COROS 数据放进同一张时间轴。rundiag 是 DSH 的右侧栏插件，用任务、复盘和教练指标回答一个问题：**今天该练什么，练完之后身体怎么样。**
 
-> 显示名 `rundiag` · npm/仓库名 `dsh-rundiag` · 当前版本 `0.5.3`
+> 显示名 `rundiag` · npm/仓库名 `dsh-rundiag` · 当前版本 `0.6.0`
+>
+> 0.6.0 界面刷新：输入框上移、模式图标、完成度圆环、单行类型选择、更紧凑的空白态与更清晰的卡片层级。
 
 ## 为什么是 rundiag
 
@@ -40,7 +42,7 @@ dsh plugin add github:huhu508/dsh-rundiag
 也可以：
 
 - 在 DSH 插件安装入口填入 `github:huhu508/dsh-rundiag`；
-- 下载 [v0.5.3 Release](https://github.com/huhu508/dsh-rundiag/releases/tag/v0.5.3) 中的 `dsh-rundiag-0.5.3.tgz` 安装；
+- 下载 [v0.6.0 Release](https://github.com/huhu508/dsh-rundiag/releases/tag/v0.6.0) 中的 `dsh-rundiag-0.6.0.tgz` 安装；
 - 本仓库源码目录通过 `plugin_manager install_bundle <绝对路径>` 安装（开发时使用）。
 
 安装或更新后**刷新一次 DSH 页面**，让 Client 插件重新加载。
@@ -64,7 +66,8 @@ dsh plugin add github:huhu508/dsh-rundiag
 
 ### 计划
 
-- 顶部日期条按周切换；箭头翻周，点击周标题回到本周。
+- 顶部日期条按周切换；箭头翻周，点击周标题或 `今天` 回到今天。
+- 输入框在能量球上方，选好类型后直接提交；模式标签带图标。
 - 每个日期只显示当天的根任务；已完成任务不再占据任务列表，完成状态由能量球表达。
 - 右上角的 `准备度` 来自教练引擎，不是手填值。
 - 快捷键：`N` 聚焦输入框，`R` 刷新数据，`Esc` 关闭详情。
